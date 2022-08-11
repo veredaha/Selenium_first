@@ -6,9 +6,7 @@ import logging
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
-git remote add origin https://github.com/veredaha/Selenium_first.git
-git branch -M main
-git push -u origin main
+
 
 logging.basicConfig(level=logging.INFO)
 mylogger = logging.getLogger()
