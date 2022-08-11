@@ -103,7 +103,6 @@ def test_forgat_passwd()->None:
     mylogger.info("test for forget password")
     driver = open()
     driver.find_element(By.LINK_TEXT, "Forgot your password?" ).click()
-    print(driver.title)
     assert driver.title == 'Forgot your password - My Store'
     driver.close()
 
