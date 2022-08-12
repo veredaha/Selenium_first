@@ -2,17 +2,20 @@ import pytest
 import logging
 from playwright.sync_api import sync_playwright
 
+
+#I couldn't run the tests to see if they work because playwrghit does not work on my computer
+
 logging.basicConfig(level=logging.INFO)
 mylogger = logging.getLogger()
 
 def open():
+ "finction opens the clothing store site"
  with sync_playwright() as p :
     browser = p.chromium.launch(headless=False, slow_mo=500)
     page = browser.new_page()
     page.goto("http://automationpractice.com/index.php?controller=authentication&back=my-account")
     return page
 
-#page.wait_for_tomeout(200)
 def test_correct_details():
     "test for correct details"
     mylogger.info("test for correct details")
@@ -86,7 +89,7 @@ def test_find_dress():
     page.locator('id=search_query').fill('summer')
     page.locator('id="submit_search"').click()
     page.wait_for_timeout(15)
-    product_list = open_page.query_selector_all(".product-container")
+    product_list = page.query_selector_all(".product-container")
     price = {}
     for product in product_list:
         price = product.query_selector(".product-price").text_content().strip()
