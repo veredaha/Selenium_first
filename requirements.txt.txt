@@ -1,0 +1,7 @@
+Requirements:
+allure-pytest         2.9.45
+allure-python-commons 2.9.45
+pytest                7.1.2
+pytest-playwright     0.3.0
+selenium              4.3.0
+playwright            1.24.1
